@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node -r esm server.js"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC"
