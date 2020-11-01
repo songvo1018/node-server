@@ -13,6 +13,7 @@ mongoose.connect('mongodb+srv://songvo:' + process.env.MONGODB_ATLAS_PW +'@clust
 })
 
 app.use(morgan('dev'))
+app.use('/uploads', express.static('uploads'))
 app.use(bodyParser.urlencoded({ extended: false}))
 app.use(bodyParser.json())
 
