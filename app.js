@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false}))
 app.use(bodyParser.json())
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '5.44.168.218:5000')
+  res.header('Access-Control-Allow-Origin', '5.44.168.218:3000' || '*' || 'localhost:3000')
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
   );
   if (res.method === 'OPTIONS') {
