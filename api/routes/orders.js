@@ -52,7 +52,7 @@ router.post('/', (req, res, next) => {
     })
     .then(result => {
       console.log(result);
-      res.status(201).json({
+      return res.status(201).json({
         message: 'Order stored!',
         createdOrder: {
           _id: result._id,
