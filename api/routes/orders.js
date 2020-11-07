@@ -36,10 +36,9 @@ router.get('/', (req, res, next) => {
 
 router.post('/', (req, res, next) => {
   Product.findById(req.body.productId)
-    .then(product => {
-      console.log(product);
-      if (!product) {
-        return res.status(404).json({
+  .then(product => {
+    if (!product) {
+      return res.status(404).json({
           message: 'Product not found'
         })
       }
@@ -51,7 +50,7 @@ router.post('/', (req, res, next) => {
       return order.save()
     })
     .then(result => {
-      console.log(result);
+      console.log(result,);
       return res.status(201).json({
         message: 'Order stored!',
         createdOrder: {
