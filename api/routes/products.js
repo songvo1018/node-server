@@ -138,6 +138,7 @@ router.patch('/:productId', (req, res, next) => {
       res.status(200).json({
         message: 'PRODUCT_UPDATED',
         request: {
+          data: {req},
           type: 'GET',
           url: 'http://194.67.93.144:5000/products/'+id
         }
