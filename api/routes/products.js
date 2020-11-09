@@ -138,7 +138,7 @@ router.patch('/:productId', (req, res, next) => {
         message: 'PRODUCT_UPDATED',
         request: {
           type: 'GET',
-          url: 'http://194.67.93.144:5000/products/ ' + id
+          url: 'http://194.67.93.144:5000/products/' + id
         }
       })
     })
