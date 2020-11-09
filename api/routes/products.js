@@ -126,12 +126,12 @@ router.get('/:productId', (req, res, next) => {
 })
 
 router.patch('/:productId', (req, res, next) => {
+  console.log(req.body);
   const id = req.params.productId;
   const updateOps = {};
   for (const ops of req.body) {
     updateOps[ops.propName] = ops.value
   }
-  console.log(req.body);
   Product.update({_id: id}, {$set: updateOps})
     .exec()
     .then(result => {
@@ -139,7 +139,7 @@ router.patch('/:productId', (req, res, next) => {
         message: 'PRODUCT_UPDATED',
         request: {
           type: 'GET',
-          url: 'http://194.67.93.144:5000/products/' + id
+          url: 'http://194.67.93.144:5000/products/'+id
         }
       })
     })
