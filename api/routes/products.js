@@ -126,7 +126,6 @@ router.get('/:productId', (req, res, next) => {
 })
 
 router.patch('/:productId', (req, res, next) => {
-  console.log(req);
   const id = req.params.productId;
   const updateOps = {};
   for (const ops of req.body) {
