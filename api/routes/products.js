@@ -75,7 +75,6 @@ router.post("/", upload.single('productImage'), (req, res, next) => {
 	product
 		.save()
 		.then((result) => {
-			console.log(result, 'log: created new product');
 			res.status(201).json({
 				message: "Created product successfully",
 				createdProduct: {
