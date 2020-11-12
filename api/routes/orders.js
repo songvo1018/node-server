@@ -60,7 +60,7 @@ router.post('/', (req, res, next) => {
         },
         request: {
           type: 'GET',
-          url: 'http://localhost:3000/orders/' + result._id
+          url: 'http://194.67.93.144/orders/' + result._id
         }
       })
     })
@@ -86,7 +86,7 @@ router.get('/:orderId', (req, res, next) => {
         order: order,
         request: {
           type: 'GET',
-          url: 'http://localhost:3000/orders'
+          url: 'http://194.67.93.144/orders'
         }
       })
     })
@@ -106,7 +106,7 @@ router.delete('/:orderId', (req, res, next) => {
 
       request: {
         type: 'POST',
-        url: 'http://localhost:3000/orders',
+        url: 'http://194.67.93.144/orders',
         body: {productId: 'ID', quantity: 'Number'}
       }
     })

@@ -46,7 +46,7 @@ router.get('/', (req, res, next) => {
             _id: doc._id,
             request: {
               type: 'GET', 
-              url: 'http://194.67.93.144:5000/products/' + doc._id
+              url: 'http://194.67.93.144/products/' + doc._id
             }
           }
         })
@@ -83,7 +83,7 @@ router.post("/", upload.single('productImage'), (req, res, next) => {
 					_id: result._id,
 					request: {
 						type: "GET",
-						url: "http://194.67.93.144:5000/products/" + result._id,
+						url: "http://194.67.93.144/products/" + result._id,
 					},
 				},
 			});
@@ -109,7 +109,7 @@ router.get('/:productId', (req, res, next) => {
 					request: {
 						type: "GET",
 						description: "GET_ALL_PRODUCTS",
-						url: "http://194.67.93.144:5000/products/",
+						url: "http://194.67.93.144/products/",
 					},
 				});
 			} else {
@@ -138,7 +138,7 @@ router.patch('/:productId', (req, res, next) => {
         request: {
           data: {req},
           type: 'GET',
-          url: 'http://194.67.93.144:5000/products/'+id
+          url: 'http://194.67.93.144/products/'+id
         }
       })
     })
@@ -160,7 +160,7 @@ router.delete('/:productId', (req, res, next) => {
         message: 'Product deleted successfully',
         request: {
           type: 'POST',
-          url: 'http://194.67.93.144:5000/products/',
+          url: 'http://194.67.93.144/products/',
           body: {name: 'String', price: 'Number' }
         }
       })
